@@ -22,8 +22,8 @@ const REFUND_EXAMPLE ={
 export function Dashboard() {
   const [name, setName] = useState("")
   const [page, setPage] = useState(1)
-  const [totalOfPages, setTotalOfPages] = useState(10)
-  const [refunds, setRefunds] = useState<RefundItemProps[]>([REFUND_EXAMPLE])
+  const [totalOfPages] = useState(10)
+  const [refunds] = useState<RefundItemProps[]>([REFUND_EXAMPLE])
 
   function fetchRefunds(e: React.FormEvent){
     e.preventDefault()

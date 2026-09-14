@@ -4,7 +4,7 @@ type Props = React.ComponentProps<"input"> & {
   filename?: string | null
 }
 
-export function Upload({filename = null, ...rest }){
+export function Upload({filename = null, ...rest }: Props){
   return (
     <div>
       <legend className="uppercase text-xxs text-gray-200 mb-2">Comprovante</legend>

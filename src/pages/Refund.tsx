@@ -13,7 +13,7 @@ export function Refund() {
  const [name, setName] = useState("Teste")
  const [amount, setAmount] = useState("34")
  const [category, setCategory] = useState("transport")
- const [isLoading, setIsLoading] = useState(false)
+ const [isLoading] = useState(false)
  const [filename, setFilename] = useState<File | null>(null)
 
  const navigate = useNavigate()
@@ -71,13 +71,13 @@ export function Refund() {
       </div>
     {
       params.id ? (
-      <a href="https://www.rocketseat.com.br" target="_blank" className="text-sm text-green-100 font-semibold flex items-center justify-center gap-2 my-6 hover:opacity-70 transition ease-linear">
+      <a href="https://www.rocketseat.com.br" target="_blank" rel="noopener noreferrer" className="text-sm text-green-100 font-semibold flex items-center justify-center gap-2 my-6 hover:opacity-70 transition ease-linear">
         <img src={fileSvg} alt="Ícone de arquivo" />
         Abrir comprovante
       </a> 
       ) : (
     <Upload 
-    filename={filename && filename.name} 
+    filename={filename?.name} 
     onChange={(e) => e.target.files && setFilename(e.target.files[0])}
     />
     )}
