@@ -43,13 +43,13 @@ export function SignUp() {
     legend="Confirmação da senha" 
     type="password" 
     placeholder="..." 
-    onChange={(e) => setPasswordConfimr(e.target.value)}
+    onChange={(e) => setPasswordConfirm(e.target.value)}
     /> 
     <Button type="submit" isLoading={isLoading}>
       Cadastrar
     </Button>
 
-    <a href="/signup" className="text-sm font-semibold text-gray-100 mt-10 mb-4 text-center hover:text-green-800 transition ease-linear">
+    <a href="/" className="text-sm font-semibold text-gray-100 mt-10 mb-4 text-center hover:text-green-800 transition ease-linear">
     Já tenho uma conta
     </a>
   </form>
